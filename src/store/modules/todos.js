@@ -1,5 +1,3 @@
-export const namespaced = true;
-
 export const state = {
   todos: []
 };
@@ -10,7 +8,7 @@ export const getters = {
 
 export const mutations = {
   ADD_TODO: (state, payload) => {
-    var newTask = {
+    const newTask = {
       id: payload.newId,
       task: payload.task,
       completed: false
@@ -18,11 +16,11 @@ export const mutations = {
     state.todos.unshift(newTask);
   },
   TOGGLE_TODO: (state, payload) => {
-    var item = state.todos.find(todo => todo.id === payload);
+    const item = state.todos.find(todo => todo.id === payload);
     item.completed = !item.completed;
   },
   DELETE_TODO: (state, payload) => {
-    var index = state.todos.findIndex(todo => todo.id === payload);
+    const index = state.todos.findIndex(todo => todo.id === payload);
     state.todos.splice(index, 1);
   }
 };

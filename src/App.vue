@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <h1>Todo List</h1>
+    <h1>To-Do List</h1>
     <div id="app">
       <div>
         <TodoNew />
         <TodoList />
       </div>
     </div>
-    <img src="vue.svg" class="vue-logo" alt="Vue.js Logo" />
+    <img src="@/assets/logo.png" class="vue-logo" alt="Vue.js Logo" />
   </div>
 </template>
 
