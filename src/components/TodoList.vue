@@ -6,9 +6,9 @@
       :class="{ completed: todo.completed }"
       class="task"
       @click="toggleTodo(todo.id)"
-      @dblclick="deleteTodo(todo.id)"
     >
       {{ todo.task }}
+      <span class="delete" @click="deleteTodo(todo.id)">ⓧ</span>
     </li>
   </ul>
 </template>
@@ -33,12 +33,15 @@ export default {
 
 <style>
 .tasks {
-  padding-left: 1.5rem;
+  padding: 0;
   list-style-type: none;
 }
 
 .task {
+  padding: 10px;
   margin-bottom: 0.5rem;
+  border: 0.5px solid #999;
+  border-radius: 5px;
   color: #34495e;
   font-weight: bold;
 }
@@ -58,5 +61,14 @@ export default {
 
 .completed:before {
   content: "\2714";
+}
+
+.delete {
+  display: block;
+  float: right;
+  color: #d22;
+  width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
 }
 </style>
