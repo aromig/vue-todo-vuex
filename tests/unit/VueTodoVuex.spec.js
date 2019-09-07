@@ -100,8 +100,7 @@ describe("vue-todo-vuex", () => {
     it("triggers a submit behavior when Enter is pressed within text box", () => {
       const TodoNewWrapper = shallowMount(TodoNew, {
         store,
-        localVue,
-        attachToDocument: true
+        localVue
       });
       TodoNewWrapper.find("input").setValue("Bake Cake");
       TodoNewWrapper.find("input").trigger("keydown.enter");
